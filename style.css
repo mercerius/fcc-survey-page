@@ -156,7 +156,10 @@ input:invalid {
 /* Larger than tablet screen */
 @media (min-width: 80rem) {
   :root {
-    font-size: 26px;
+    font-size: 18px;
+  }
+  .content {
+    grid-template-rows: 1fr 3fr;
   }
 }
 
