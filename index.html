@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    <div class="grid-container">
+      <div class="content">
+        <div class="header">
+          <div class="title">
+            <h1 id="title">Thank you for using our product!</h1>
+          </div>
+          <div class="description">
+            <p id="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              enim modi earum ex libero inventore ipsam quis dolorum quibusdam
+              autem unde tempore explicabo non iure, fuga, ipsum voluptas,
+              pariatur iste?
+            </p>
+          </div>
+        </div>
+        <div class="form">
+          <form action="" id="survey-form">
+            <pre><code><em>let</em> result = {
+    <label for="name" id="name-label">name</label>  : "<input type="text" name="name" id="name" placeholder="_" required>",
+    <label for="email" id="email-label">email</label> : "<input type="email" name="email" id="email" placeholder="_" required>",
+    <label for="number" id="number-label">age</label>   :  <input type="number" name="number" id="number" placeholder="_" min="1" max="100" required> ,
+    <label for="dropdown" id="dropdown-label">exp</label>   : "<select name="dropdown" id="dropdown"><option disabled value="" selected>[]</option>
+    <option value="zero-one">0-1 Years</option>
+    <option value="two-four">2-4 Years</option>
+    <option value="five-up">5+ Years</option></select>",
+    <label for="radios">recommendProduct</label> : <input type="radio" name="recommendProduct" id="true-radio" selected value="true"><em>True</em> <em class="operator">||</em> <input type="radio" name="recommendProduct" id="false-radio" value="false"><em>False</em>,
+    <label for="checkboxes">applicationFlags</label> : {
+      frontEnd : <input type="checkbox" name="checkboxes" id="frontend" value="frontend">,
+      backEnd  : <input type="checkbox" name="checkboxes" id="backend" value="backend">,
+      fullStack : <input type="checkbox" name="checkboxes" id="fullstack" value="fullstack">
+    },
+    <label for="comments">comments</label> : {
+      <textarea name="comments" id="comments" cols="25" rows="3"></textarea>
+    }
+}
+                </code></pre>
+
+            <button type="submit" id="submit">post()</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

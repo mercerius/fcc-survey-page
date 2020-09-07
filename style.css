@@ -1,0 +1,175 @@
+:root {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". content .";
+  justify-items: center;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1.5fr;
+  gap: 1px 1px;
+  grid-template-areas:
+    "header"
+    "form";
+  grid-area: content;
+  justify-items: center;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas:
+    "title"
+    "description";
+  grid-area: header;
+}
+
+.title {
+  grid-area: title;
+}
+
+.description {
+  grid-area: description;
+}
+
+.form {
+  grid-area: form;
+  justify-self: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+em {
+  color: purple;
+  font-weight: bold;
+}
+
+em.operator {
+  color: rgb(64, 64, 255);
+  font-style: normal;
+}
+
+textarea {
+  border: none;
+  resize: none;
+}
+
+button {
+  text-align: center;
+  display: block;
+  margin: 1em auto 2em auto;
+  border: none;
+  border-radius: 5px;
+  width: 4em;
+  height: calc(4em * 0.618);
+  background: seagreen;
+  color: white;
+  font-family: monospace;
+  font-size: 2em;
+  transition: background-color 1s;
+}
+
+button:hover {
+  background: crimson;
+}
+
+pre {
+  line-height: 1.5rem;
+  background: rgb(240, 240, 240);
+  padding: 1rem 0 1rem 0;
+  padding: 1rem;
+  margin-top: 2rem;
+  max-width: calc(40ch + 2rem);
+  font-size: 0.88rem;
+}
+
+h1 {
+  border-bottom: solid 0.75rem crimson;
+  padding-bottom: 1rem;
+}
+
+label {
+  white-space: nowrap;
+  color: lightseagreen;
+}
+
+select {
+  border: none;
+  background: rgb(240, 240, 240);
+}
+
+input {
+  border: none;
+  text-align: left;
+  background: rgb(240, 240, 240);
+}
+
+input[type="text"],
+input[type="email"] {
+  color: seagreen;
+}
+
+input:invalid {
+  box-shadow: none;
+  border: none;
+  color: crimson;
+}
+
+#description {
+  text-indent: 2rem;
+}
+
+/**mobile css above*/
+
+/* Larger than mobile screen */
+@media (min-width: 40rem) {
+  :root {
+    font-size: 24px;
+  }
+
+  pre {
+    font-size: 1rem;
+  }
+}
+
+/* Larger than tablet screen */
+@media (min-width: 80rem) {
+  :root {
+    font-size: 26px;
+  }
+}
+
+/* Larger than desktop screen */
+@media (min-width: 120rem) {
+  :root {
+    font-size: 36px;
+  }
+
+  h1 {
+    padding-bottom: 0;
+  }
+
+  pre {
+    margin-top: 0;
+  }
+}
